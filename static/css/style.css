@@ -1,0 +1,119 @@
+/* === Paleta de colores base === */
+:root {
+  --color-bg: #ffffff; /* Background color */
+  --color-bg-glass: rgba(245, 246, 250, 0.85); /* Glass background */
+  --color-panel: rgba(55, 65, 81, 0.85); /* Panel color */
+  --color-border: #d1d5db; /* Border color */
+  --color-text: #22292f; /* Text color */
+  --color-title: #111827; /* Title color */
+  --color-accent: #6B8E23; /* Accent color */
+  --color-accent-light: #a3c585; /* Light accent color */
+  --color-blue: #5C7BA5; /* Blue color */
+  --color-blue-light: #A7C7E7; /* Light blue color */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: inherit;
+  filter: blur(2px) brightness(0.8);
+  z-index: -1;
+}
+
+.glass-panel {
+  background: var(--color-bg-glass);
+  border-radius: 24px;
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  border: 1px solid var(--color-border);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--color-accent);
+}
+
+.contact-icons svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5rem;
+  fill: var(--color-accent);
+  transition: fill 0.2s;
+}
+.contact-icons svg:hover {
+  fill: var(--color-blue);
+}
+
+h1, h2 {
+  color: var(--color-title);
+}
+
+button, .btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: var(--color-blue);
+}
+
+.card {
+  background: var(--color-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--color-border);
+}
+
+input, select, textarea {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: #f9fafb;
+  color: var(--color-text);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  background: #fff;
+}
+
+.chartjs-render-monitor {
+  background: var(--color-bg);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1rem;
+}
+
+/* Utilidades */
+.text-accent { color: var(--color-accent); }
+.text-blue { color: var(--color-blue); }
+.text-title { color: var(--color-title); }
+.text-muted { color: #6b7280; }
